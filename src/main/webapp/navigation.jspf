@@ -1,0 +1,7 @@
+
+<b>Application Menu</b>
+<ul>
+ <li/> <a href="mainpage.jsp">Main page</a>
+ <li/> <a href="sendPush.jsp">Send Push</a>
+ <li/> <a href="devices.jsp">Devices</a>
+</ul>

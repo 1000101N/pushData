@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Client</title>
+    <script type="text/javascript">
+        var wsocket;
+        function connect() {
+            wsocket = new WebSocket("ws://localhost:8080/pushdata/push/1");
+            wsocket.onmessage = onMessage;
+        }
+        function onMessage(evt) {
+            document.getElementById("message").innerHTML=evt.data;
+        }
+        window.addEventListener("load", connect, false);
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td> <label id="rateLbl">Current message:</label></td>
+        <td id="message" ></td>
+    </tr>
+    <tr>
+        <td> <form action="http://localhost:8080/pushdata/api/data/sendPush" method="get">
+            Id: <input type="text" name="id"><br>
+            <input type="submit" value="Submit">
+        </form> </td>
+    </tr>
+</table>
+</body>
+</html>

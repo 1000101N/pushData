@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="PushData:EJB exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PushData_EJB_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="PushData/ejb/EJB" />
+      <element id="module-output" name="PushData" />
+    </root>
+  </artifact>
+</component>
