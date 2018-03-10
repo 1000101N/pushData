@@ -90,6 +90,13 @@ public class DataBean {
     }
 
     @GET
+    @Path("say")
+    @Produces("application/json")
+    public String sayHello(){
+        return "Hello OPENSHIFT";
+    }
+
+    @GET
     @Path("sendPush")
     public void pushData(@QueryParam("token") String token,@QueryParam("isData") String isData,@QueryParam("message") String message) throws Exception{
         this.token = token;
